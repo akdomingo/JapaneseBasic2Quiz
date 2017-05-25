@@ -14,5 +14,5 @@ Ver-2
    "Uncaught ReferenceError: submitAnswers is not defined at HTMLButtonElement.onclick (index.html:18)"
    
    Suggested solution/s: 
-   a. Rewrite script according to link below:
-   http://eloquentjavascript.net/10_modules.html
+   - a. Rewrite script according to link below: http://eloquentjavascript.net/10_modules.html
+  

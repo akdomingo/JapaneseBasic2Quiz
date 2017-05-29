@@ -1,0 +1,38 @@
+/*-Lesson Pages-*/
+
+.backmainpage {
+  font-size: 0.7rem;
+  display: grid;
+  margin-bottom: 18px;
+}
+
+.content {
+  display:inline-block;
+  border: 1px solid #ECECEC;
+  width: 88%;
+  margin: auto;
+}
+
+.items {
+  display: inline-block;
+  width: 260px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 12px;
+}
+
+input {
+  font-size: 1.1rem;
+  margin: 0px;
+}
+
+.incorrect {
+  font-size: 0.7rem;
+  color: #E67C73;
+}
+
+
+.correct {
+  font-size: 0.7rem;
+  color: #3367D6;
+}

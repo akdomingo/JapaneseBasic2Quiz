@@ -1,62 +1,35 @@
+/*--All--*/
 body {
   font-family: Roboto, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.54);
+  text-align: center;
 }
 
 .title {
   color: #F1453D;
-  margin: 72px auto 0px auto;
+  margin: 90px auto 0px auto;
   padding: none;
+  font-size: 3rem;
+}
+
+.subtitle {
   font-size: 2rem;
-}
-
-.lessontitle {
-  color: #F1453D;
-  margin: 24px 0 8px 0;
-}
-
-a .backtomainpage {
-  font-size: 0.6rem;
-}
-
-button {
-  display: grid;
-  margin: 24px;
-}
-
-.content {
-  display:inline-block;
-  border: 1px solid #ECECEC;
-  width: 90%;
-  margin: auto;
-}
-.items {
-  display: inline-block;
-  width: 300px;
-  font-size: 1.1rem;
-  font-weight: 400;
-  padding: 12px;
-}
-
-input {
-  font-size: 1.2em;
-  margin: 0px;
-}
-
-.correct {
-  font-size: 0.7rem;
-  color: #3367D6;
-}
-
-.incorrect {
-  font-size: 0.7rem;
-  color: #E67C73;
+  margin: 48px 0 2px 0;
 }
 
 button {
   border: none;
-  font-size: 1rem;
-  background-color: #974321;
+  display: inline-block;
+  background-color: #F1453D;
   color: #FAFAFA;
+  font-size: 1.1rem;
+  margin: 18px 12px;
+  padding: 8px 24px;
+  min-width: 200px;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: #CA332C;
 }

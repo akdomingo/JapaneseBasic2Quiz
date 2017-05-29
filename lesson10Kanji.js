@@ -1,4 +1,4 @@
-//(function() {
+(function() {
   var lesson10Kanji = [
     {
       kanji: '正午', //duplicate deleted from lesson 10
@@ -44,4 +44,15 @@
 
     }
   }
-//}());
+
+  document.getElementById('lessonContainer')
+  .addEventListener('click', function(e) {
+    console.log(e);
+    var element = e.target;
+    var isSubmitButton = element.classList.contains('check-button');
+
+    if (isSubmitButton) {
+      submitAnswers();
+    }
+  });
+}());

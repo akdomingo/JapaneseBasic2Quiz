@@ -1,4 +1,4 @@
-//(function(){
+(function(){
   var lesson7Kanji = [
     {
       kanji: '東京',
@@ -100,7 +100,7 @@
       kana: 'そふ',
       english: [
         'grandfather',
-        'grandfather (formal)',
+        ' grandfather (formal)',
       ],
     },
     {
@@ -123,7 +123,7 @@
       kana: 'そぼ',
       english: [
         'grandmother',
-        'grandmother (formal)',
+        ' grandmother (formal)',
       ],
     },
     {
@@ -131,7 +131,7 @@
       kana: 'たかい',
       english: [
         'expensive',
-        'high',
+        ' high',
       ],
     },
     {
@@ -186,16 +186,16 @@
       kanji: '日本語',
       kana: 'にほんご',
       english: [
-        'Japanese language',
-        'Japanese',
+        'Japanese (language)',
+        //'Japanese',
       ],
     },
     {
       kanji: '英語',
       kana: 'えいご',
       english: [
-        'English language',
-        'English',
+        'English (language)',
+        //'English',
       ],
     },
     {
@@ -203,7 +203,7 @@
       kana: 'けいご',
       english: [
         'honorific expressions',
-  //      ' formal speech pattern',
+        //' formal speech pattern',
       ],
     },
     {
@@ -256,7 +256,7 @@
     },
     {
       kanji: [
-        '入り口',
+        //'入り口',
         '入口',
       ],
       kana: 'いりぐち',
@@ -286,24 +286,43 @@
 
   document.getElementById("lesson7Kanji").innerHTML = question;
 
+  function setResult(element, isCorrect) {
+    var text;
+    var textColor;
+
+    if (isCorrect) {
+      text = 'Correct!';
+      textColor = 'correct';
+    } else {
+      text = 'Try Again.';
+      textColor = 'incorrect';
+    }
+
+    element.innerHTML = text;
+    element.classList.add(textColor);
+  }
+
   //SUBMIT ANSWERS
   function submitAnswers() {
-    var answers, textColor, text;
+    var answers;
 
     answers = document.getElementsByClassName("answer");
 
-    for(var j = 0, i = 0; j < answers.length, i < lesson9Kanji.length; j++, i++) {
-      if (answers[j].value == lesson9Kanji[i].kana　|| answers[j].value == lesson9Kanji[i].kanji) {
-        text = 'Correct!';
-        textColor = 'correct';
-      } else {
-        text = 'Try Again.';
-        textColor = 'incorrect';
-      }
-
-      document.getElementById("result"+i).innerHTML = text;
-      document.getElementById("result"+i).className = textColor;
-
+    for(var j = 0, i = 0; j < answers.length; j++, i++) {
+      var isCorrect = answers[j].value == lesson7Kanji[i].kana　||
+          answers[j].value == lesson7Kanji[i].kanji;
+      setResult(document.getElementById("result"+i), isCorrect);
     }
-  }  
-//}());
+  }
+
+  document.getElementById('lessonContainer')
+  .addEventListener('click', function(e) {
+    console.log(e);
+    var element = e.target;
+    var isSubmitButton = element.classList.contains('check-button');
+
+    if (isSubmitButton) {
+      submitAnswers();
+    }
+  });
+}());

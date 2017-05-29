@@ -1,4 +1,4 @@
-//(function(){
+(function(){
   var lesson8Kanji = [
 
     {
@@ -280,12 +280,14 @@
 
   //SUBMIT ANSWERS
   function submitAnswers() {
-    var answers, textColor, text;
+    var answers;
+    var textColor;
+    var text;
 
     answers = document.getElementsByClassName("answer");
 
-    for(var j = 0, i = 0; j < answers.length, i < lesson9Kanji.length; j++, i++) {
-      if (answers[j].value == lesson9Kanji[i].kana　|| answers[j].value == lesson9Kanji[i].kanji) {
+    for(var j = 0, i = 0; j < answers.length, i < lesson8Kanji.length; j++, i++) {
+      if (answers[j].value == lesson8Kanji[i].kana　|| answers[j].value == lesson8Kanji[i].kanji) {
         text = 'Correct!';
         textColor = 'correct';
       } else {
@@ -298,4 +300,15 @@
 
     }
   }
-//}());
+
+  document.getElementById('lessonContainer')
+  .addEventListener('click', function(e) {
+    console.log(e);
+    var element = e.target;
+    var isSubmitButton = element.classList.contains('check-button');
+
+    if (isSubmitButton) {
+      submitAnswers();
+    }
+  });
+}());

@@ -1,4 +1,4 @@
-//(function() {
+(function() {
   var lesson9Kanji = [
     {
       kanji: '午前',
@@ -15,7 +15,7 @@
       kana: 'ごご',
       english: [
         'P.M.',
-        'in the afternoon',
+        ' in the afternoon',
       ],
     },
     {
@@ -33,7 +33,7 @@
       kana: 'うしろ',
       english: [
         'back',
-        'behind',
+        ' behind',
       ],
     },
     /*{
@@ -46,7 +46,7 @@
       kana: 'まえ',
       english: [
         'before',
-        'front',
+        ' front',
       ],
     },
     {
@@ -60,36 +60,36 @@
       english: ['advanced sale',],
     },*/
     {
-      kanji: '',
-      kana: '',
+      kanji: '有名',
+      kana: 'ゆうめい',
       english: ['famous',],
     },
     {
-      kanji: '',
-      kana: '',
+      kanji: '名刺',
+      kana: 'めいし',
       english: [
         'business card',
         'name card',
       ],
     },
     {
-      kanji: '',
-      kana: '',
+      kanji: '指名',　//double check with your book!
+      kana: 'しめい',
       english: ['full name',],
     },
     {
-      kanji: '',
-      kana: '',
+      kanji: '地名',　//double check with your book!
+      kana: 'ちめい',
       english: ['place name',],
     },
     {
-      kanji: '',
-      kana: '',
+      kanji: '白',
+      kana: 'しろ',
       english: ['white',],
     },
     {
-      kanji: '',
-      kana: '',
+      kanji: '白い',
+      kana: 'しろい',
       english: ['white color',],
     },
     /*{
@@ -98,7 +98,7 @@
       english: ['swan',],
     },*/
   ];
-  
+
   var question = '';
 
   for (var i = 0; i < lesson9Kanji.length; i++) {
@@ -131,4 +131,15 @@
 
     }
   }
-//}());
+
+  document.getElementById('lessonContainer')
+  .addEventListener('click', function(e) {
+    console.log(e);
+    var element = e.target;
+    var isSubmitButton = element.classList.contains('check-button');
+
+    if (isSubmitButton) {
+      submitAnswers();
+    }
+  });
+}());

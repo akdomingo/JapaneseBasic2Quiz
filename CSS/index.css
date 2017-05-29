@@ -1,0 +1,22 @@
+.tableofcontents {
+  display:table;
+}
+
+.lessonsbox {
+  display:inline-block;
+  align-items: center;
+}
+
+a.btn {
+  display: table;
+  margin: 18px 0;
+  padding: 10px 20px;
+  color: #FFF;
+  background-color: #F1453D;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+a.btn:hover {
+  background-color: #CA332C;
+  text-indent: 0.1rem;
+}

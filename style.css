@@ -1,25 +1,42 @@
 body {
-  font-family: Roboto;
-  font-size: 13px;
+  font-family: Roboto, sans-serif;
+  font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.54);
 }
 
+.title {
+  color: #F1453D;
+  margin: 72px auto 0px auto;
+  padding: none;
+  font-size: 2rem;
+}
+
 .lessontitle {
-  color: rgba(255, 0, 0, 0.87);
+  color: #F1453D;
+  margin: 24px 0 8px 0;
 }
 
-span {
-/*  text-align: center;*/
-  float: left;
-  margin: 18px;
-  padding: 0 24px 24px 24px;
+a .backtomainpage {
+  font-size: 0.6rem;
+}
+
+button {
+  display: grid;
+  margin: 24px;
+}
+
+.content {
+  display:inline-block;
   border: 1px solid #ECECEC;
+  width: 90%;
+  margin: auto;
 }
-
-.qs {
+.items {
+  display: inline-block;
+  width: 300px;
   font-size: 1.1rem;
   font-weight: 400;
-  margin: 0px;
+  padding: 12px;
 }
 
 input {
@@ -27,14 +44,19 @@ input {
   margin: 0px;
 }
 
-.rslt {
-  font-size: 10px;
+.correct {
+  font-size: 0.7rem;
+  color: #3367D6;
+}
+
+.incorrect {
+  font-size: 0.7rem;
   color: #E67C73;
 }
 
 button {
   border: none;
-  font-size: 1.5em;
+  font-size: 1rem;
   background-color: #974321;
   color: #FAFAFA;
 }

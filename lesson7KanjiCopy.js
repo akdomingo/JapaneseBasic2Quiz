@@ -1,4 +1,4 @@
-//(function(){
+(function(){
   var lesson7Kanji = [
     {
       kanji: '東京',
@@ -286,24 +286,31 @@
 
   document.getElementById("lesson7Kanji").innerHTML = question;
 
+  function setResult(element, isCorrect) {
+    var text;
+    var textColor;
+
+    if (isCorrect) {
+      text = 'Correct';
+      textColot = 'correct';
+    } else {
+      text = 'Try Again.';
+      textColor = 'incorrect';
+    }
+
+    element.innerHTML = text;
+    element.classList.add(textColor);
+  }
   //SUBMIT ANSWERS
   function submitAnswers() {
     var answers, textColor, text;
 
     answers = document.getElementsByClassName("answer");
 
-    for(var j = 0, i = 0; j < answers.length, i < lesson9Kanji.length; j++, i++) {
-      if (answers[j].value == lesson9Kanji[i].kana　|| answers[j].value == lesson9Kanji[i].kanji) {
-        text = 'Correct!';
-        textColor = 'correct';
-      } else {
-        text = 'Try Again.';
-        textColor = 'incorrect';
-      }
-
-      document.getElementById("result"+i).innerHTML = text;
-      document.getElementById("result"+i).className = textColor;
-
+    for(var j = 0, i = 0; j < answers.length; j++, i++) {
+      var isCorrect = answers[j].value == lesson7Kanji[i].kana　||
+          answers[j].value == lesson7Kanji[i].kanji);
+      setResult(document.getElementById("result"+i), isCorrect);
     }
-  }  
-//}());
+  }
+}());

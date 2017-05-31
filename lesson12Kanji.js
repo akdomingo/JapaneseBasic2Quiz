@@ -5,6 +5,16 @@
       kana: 'ジンジャー',
       english: [ 'shrine',],
     },
+    {
+      kanji: '色々な所',　//moved fro lesson 11
+      kana: 'いろいろなところ',
+      english: ['various places',],
+    },
+    {
+      kanji: '',
+      kana: '',
+      english: ['',],
+    },
   ];
 
   var question = '';

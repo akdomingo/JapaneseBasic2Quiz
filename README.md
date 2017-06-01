@@ -1,7 +1,17 @@
 # JapaneseBasic2Quiz
-Ver 3-2
-2017-05-29
-Notes:
+Ver 3-2 2017-06-01 Notes:
+1. Completed vocab list for all lessons
+2. Minimum requirement for first iteration.
+3. Link from Bien: https://www.sitepoint.com/simple-javascript-quiz/
+4. Others:
+  - Vocabulary per lesson
+  - Kanji Kunyomi/Onyomi
+  - Kanji to Kana
+  - One question per card
+
+/*-------*/
+
+Ver 3-2 2017-05-29 Notes:
 1. JS for Lesson 7 slightly differs with Lesson 8-12
 2. Lesson7.js
   - classList.add for "Correct!" (.correct) doesn't change back to red for "Try Again." (.incorrect)
